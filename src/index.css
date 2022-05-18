@@ -11,3 +11,110 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav {
+  padding: 0 2rem;
+}
+
+main {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 2rem 0;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-action p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.cart {
+  position: fixed;
+  right: 2rem;
+  top: 7rem;
+  background-color: #43A047;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+i {
+  color: #fff;
+}
+.secondary-content i {
+  color: #000;
+}
+
+.collection {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+  width: 400px;
+  -webkit-box-shadow: 0px 0px 22px -1px #26A69A;
+    box-shadow: 0px 0px 22px -1px #26A69A;
+  border: none;
+}
+
+.count-btn {
+  background-color: transparent;
+  width: 10px;
+  height: 100%;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all ease .3s;
+  
+}
+
+.count-btn:hover {
+  transform: scale(1.1);
+}
+button.count-btn:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+#alert {
+  position: fixed;
+  right: 6rem;
+  top: 7rem;
+  z-index: 100;
+  animation: fade-in ease-in-out .3s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    top: 7rem;
+    opacity: 0;
+  }
+  to {
+    top: 3.8rem;
+    opacity: 1;
+  }
+} 
+
